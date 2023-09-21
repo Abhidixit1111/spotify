@@ -1,0 +1,137 @@
+body{
+    background-color: rgba(0, 0, 0, 0.751);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+.logo{
+    height: 8vh;
+    border-radius: 50px;
+    margin: 10px 5px;
+}
+.logoname{
+    font-size: 5vh;
+}
+.maincont{
+    padding: 10px 10px;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.songlist{
+    margin-right: 20px;
+    height: 100%;
+    width: 375px;
+    background-color: rgba(0, 0, 0, 0.751);
+    overflow: scroll;
+    border-radius: 30px;
+}
+.song{
+    margin: 10px;
+    height: 5vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+.songlistimg{
+    height: 5vh;
+    border-radius: 30px;
+}
+.songname{
+    width: 80%;
+    color: white;
+}
+.song-img{
+    cursor: pointer;
+}
+.picbtn{
+    cursor: pointer;
+}
+.btngif{
+    height: 5vh;
+    width: 20%;
+    opacity: 0;
+}
+.songimg{
+    /* margin: 10px; */
+    height: 100%;
+    width: 1000px;
+    background-color: red;
+    background-image: url('cover/bg.jpg');
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainimg{
+    height: 20vh;
+    border-radius: 100px;
+}
+
+.imggif{
+    height: 4vh;
+    width: 20%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rangecont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.range{
+    margin-top: -5vh;
+    width: 90%;
+    font: 1em sans-serif;
+}
+
+.pic{
+    width: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button{
+    border-radius: 40px;
+    background-color: transparent;
+}
+
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.check{
+    opacity: 0;
+}
