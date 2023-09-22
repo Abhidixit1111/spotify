@@ -72,7 +72,7 @@ nav{
     height: 100%;
     width: 1000px;
     background-color: red;
-    background-image: url('cover/bg.jpg');
+    background-image: url('bg.jpg');
     border-radius: 30px;
     display: flex;
     justify-content: center;

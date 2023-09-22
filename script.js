@@ -1,4 +1,4 @@
-let audio = new Audio('songs/1.mp3');
+let audio = new Audio('1.mp3');
 let btn2 = document.getElementById('play_pause');
 let pic = document.getElementById('changepic');
 let songitem = Array.from(document.getElementsByClassName('song'));
@@ -21,23 +21,23 @@ progressbar.addEventListener('change',()=>{
 btn2.addEventListener('click', () => {
     if (audio.paused == false) {
         audio.pause();
-        pic.src = 'cover/pause.png';
+        pic.src = 'pause.png';
         maingif.style.opacity=0;
 
     }
     else {
         audio.play();
-        pic.src = 'cover/play-pause.png';
+        pic.src = 'play-pause.png';
         maingif.style.opacity=1;
     }
 })
 let songs = [
-    { songName: "Barshaat aa gyi", filePath: "songs/1.mp3", coverPath: "cover/1.jpg" },
-    { songName: "Jana teri yaade", filePath: "songs/2.mp3", coverPath: "cover/2.jpg" },
-    { songName: "Dil meri n sune", filePath: "songs/3.mp3", coverPath: "cover/3.jpg" },
-    { songName: "Baithe baithe m", filePath: "songs/4.mp3", coverPath: "cover/4.jpg" },
-    { songName: "Phir bhi tumko j", filePath: "songs/5.mp3", coverPath: "cover/5.jpg" },
-    { songName: "Bachpan ka pyar.", filePath: "songs/6.mp3", coverPath: "cover/6.jpg" }
+    { songName: "Barshaat aa gyi", filePath: "1.mp3", coverPath: "1.jpg" },
+    { songName: "Jana teri yaade", filePath: "2.mp3", coverPath: "2.jpg" },
+    { songName: "Dil meri n sune", filePath: "3.mp3", coverPath: "3.jpg" },
+    { songName: "Baithe baithe m", filePath: "4.mp3", coverPath: "4.jpg" },
+    { songName: "Phir bhi tumko j", filePath: "5.mp3", coverPath: "5.jpg" },
+    { songName: "Bachpan ka pyar.", filePath: "6.mp3", coverPath: "6.jpg" }
 ];
 songitem.forEach((e, i) => {
     e.getElementsByClassName('songlistimg')[0].src = songs[i].coverPath;
@@ -47,22 +47,22 @@ songitem.forEach((e, i) => {
 for (let i = 0; i < btn3.length; i++) {
     btn3[i].addEventListener('click', () => {
         if (audio.paused == false) {
-            pic.src = 'cover/pause.png';
-            btn3[i].src = 'cover/pause.png';
-            audio.src = `songs/${i + 1}.mp3`;
+            pic.src = 'pause.png';
+            btn3[i].src = 'pause.png';
+            audio.src = `${i + 1}.mp3`;
             for (let j = 0; j < btn3.length; j++) {
                 if (j !== i) {
-                    btn3[j].src = `cover/pause.png`;
+                    btn3[j].src = `pause.png`;
                 }
             }
             maingif.style.opacity=0;
             audio.pause();
         }
         else {
-            audio.src = `songs/${i + 1}.mp3`;
-            pic.src = 'cover/play-pause.png';
-            btn3[i].src = 'cover/play-pause.png';
-            mainimg[0].src = `cover/${i + 1}.jpg`;
+            audio.src = `${i + 1}.mp3`;
+            pic.src = 'play-pause.png';
+            btn3[i].src = 'play-pause.png';
+            mainimg[0].src = `${i + 1}.jpg`;
             maingif.style.opacity=1;
             audio.play();
         }
@@ -70,16 +70,17 @@ for (let i = 0; i < btn3.length; i++) {
 }
 
 left.addEventListener('click', () => {
-    let index = audio.src.charAt(28);
+    let index = audio.src.charAt(22);
     if (index > 1) {
-        audio.src = `songs/${--index}.mp3`;
+        // console.log('first')
+        audio.src = `${--index}.mp3`;
         audio.play();
-        pic.src = 'cover/play-pause.png';
-        btn3[index-1].src = 'cover/play-pause.png';
-        mainimg[0].src = `cover/${index}.jpg`;
+        pic.src = 'play-pause.png';
+        btn3[index-1].src = 'play-pause.png';
+        mainimg[0].src = `${index}.jpg`;
         for (let j = 0; j < btn3.length; j++) {
             if (j !== index) {
-                btn3[j].src = `cover/pause.png`;
+                btn3[j].src = `pause.png`;
             }
         }
         audio.play();
@@ -87,16 +88,16 @@ left.addEventListener('click', () => {
 })
 
 right.addEventListener('click',()=>{
-    let index=audio.src.charAt(28);
+    let index=audio.src.charAt(22);
     if(index<songs.length)
     {
-        audio.src=`songs/${++index}.mp3`;
-        pic.src='cover/play-pause.png';
-        btn3[index-1].src='cover/play-pause.png';
-        mainimg[0].src=`cover/${index}.jpg`;
+        audio.src=`${++index}.mp3`;
+        pic.src='play-pause.png';
+        btn3[index-1].src='play-pause.png';
+        mainimg[0].src=`${index}.jpg`;
         for (let j = 0; j < btn3.length; j++) {
             if (j !== index) {
-                btn3[j].src = `cover/pause.png`;
+                btn3[j].src = `pause.png`;
             }
         }
         audio.play();
